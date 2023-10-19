@@ -1,0 +1,2 @@
+# fp-rancher
+REPO DESTINADO AOS CODES DO RANCHER. 
