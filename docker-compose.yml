@@ -1,0 +1,23 @@
+version: '3'
+
+networks:
+  rancher:
+    external: true
+
+volumes:
+    rancher:
+
+services:
+  server:
+    image: rancher/rancher:v2.7-head
+    privileged: true
+    restart: always
+    env_file:
+      - .env
+    ports:
+     - 6443:6443
+     - 443:443
+    networks:
+     - rancher
+    volumes:
+      - rancher:/var/lib/rancher
